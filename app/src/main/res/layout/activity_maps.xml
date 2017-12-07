@@ -1,0 +1,58 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MapsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.54">
+
+            <TextView
+                android:layout_width="199dp"
+                android:layout_height="match_parent"
+                android:id="@+id/console"
+                android:textAppearance="@android:style/TextAppearance.Material.Display1"
+                android:text="Consola Info" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Switch
+                    android:text="Verde/Rojo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/switch1"
+                    android:switchMinWidth="100dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:text="GUARDAR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/save"
+            android:layout_weight="0.35" />
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="253dp"
+            android:id="@+id/map"
+            tools:context=".MapsActivity"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_weight="0.11" />
+
+    </LinearLayout>
+
+</FrameLayout>
